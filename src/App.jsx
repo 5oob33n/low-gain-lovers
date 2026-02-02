@@ -113,7 +113,8 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#ff007f] selection:text-white flex flex-col items-center">
+    // Added 'overflow-x-hidden' to prevent horizontal scroll on mobile
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#ff007f] selection:text-white flex flex-col items-center overflow-x-hidden">
       {/* Import Custom Font - Playfair Display (Restored & Cleaned) */}
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');`}
@@ -537,7 +538,7 @@ const ScaleFinder = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto pb-2 custom-scrollbar">
+      <div className="overflow-x-auto pb-2 custom-scrollbar w-full">
         <div className="relative min-w-[650px] bg-[#111] border border-neutral-800 select-none">
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#ff007f] z-10"></div>
           {[...Array(6)].map((_, stringIndex) => { 
